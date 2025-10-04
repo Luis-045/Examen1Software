@@ -32,6 +32,9 @@
 | Teórico | LSP + ISP | 10 | 20 min |
 | **TOTAL** | | **100** | **120 min** |
 ---
+
+# HICE LOS 3 EJERCICIOS, DEL TERCERO NO HICE EL BONUS, TODO ESTA EN EL MISMO ARCHIVO
+
 ## 🟢 EJERCICIO 1: Open/Closed Principle (30 pts - 25 min)
 ### Problema:
 El método `buscar_libro()` viola OCP con múltiples.
@@ -99,8 +102,16 @@ Que las clases hijas deben poder sustituir a las padres, es decir por ejemplo aq
 **b) (5 pts)** Da un ejemplo que VIOLE LSP y explica por qué:
 ```python
 # Tu código aquí
-#NO ALCANCE
+class Empleado:
+    def calcular_pago(self, horas_trabajadas):
+        return horas_trabajadas * 50
+
+class Practicante(Empleado):
+    def calcular_pago(self, horas_trabajadas):
+        pass
 # Explicación:
+A los practicantes se le debe pagar de otra forma por lo que la clase practicante ya no pdoria sustituir a la de empleado
+que si se le pagan por horas
 _________________________________________________________________
 ```
 ---
